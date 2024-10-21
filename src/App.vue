@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import TranslationForm from './components/TranslationForm.vue'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import TranslationForm from './components/TranslationForm.vue'
     />
 
     <div class="wrapper">
-      <TranslationForm />
+      <HelloWorld msg="You did it!" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
