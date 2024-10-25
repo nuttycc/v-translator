@@ -1,19 +1,5 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
 
 @media (hover: hover) {
   a:hover {
@@ -21,15 +7,40 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+/* Dark模式下的input样式 */
+@media (prefers-color-scheme: dark) {
+  textarea {
+    background-color: #242424;
+    border: 1px solid #383838;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+    line-height: 1.5;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  textarea:focus {
+    outline: none;
+    border-color: #42b883;
+    box-shadow: 0 0 0 2px rgba(66, 184, 131, 0.2);
+  }
+
+  textarea::placeholder {
+    color: #666666;
+  }
+
+  textarea::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  textarea::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+
+  textarea::-webkit-scrollbar-thumb {
+    background: #4a4a4a;
+    border-radius: 4px;
   }
 }
